@@ -1,0 +1,156 @@
+//helloName
+
+//Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+
+//helloName("Bob") → "Hello Bob!"
+//helloName("Alice") → "Hello Alice!"
+//helloName("X") → "Hello X!"
+
+
+public static String HelloName(String name)
+        {
+            return "Hello " + name + "!";
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine(HelloName("Bob"));
+            Console.WriteLine(HelloName("Alice"));
+            Console.WriteLine(HelloName("X"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+//makeAbba
+
+//Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+
+//makeAbba("Hi", "Bye") → "HiByeByeHi"
+//makeAbba("Yo", "Alice") → "YoAliceAliceYo"
+//makeAbba("What", "Up") → "WhatUpUpWhat"
+
+        public static String MakeAbba(String a, String b)
+        {
+            return a + b + b + a;
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine(MakeAbba("Hi","Bye"));
+            Console.WriteLine(MakeAbba("Yo", "Alice"));
+            Console.WriteLine(MakeAbba("What", "Up"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+ 
+//makeTags
+
+//The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text.In this example,
+//the "i" tag makes <i> and</i> which surround the word "Yay". Given tag and word strings, 
+//create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+
+//makeTags("i", "Yay") → "<i>Yay</i>"
+//makeTags("i", "Hello") → "<i>Hello</i>"
+//makeTags("cite", "Yay") → "<cite>Yay</cite>"
+       
+       
+       public static String MakeTags(String tag, String word)
+        {
+            return "<" + tag + ">" + word + "</" + tag + ">";
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(MakeTags("i", "Yay"));
+            Console.WriteLine(MakeTags("i", "Hello"));
+            Console.WriteLine(MakeTags("cite", "Yay"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+        //makeOutWord
+
+        //Given an "out" string length 4, such as "<<>>", and a word, return a new string 
+        //where the word is in the middle of the out string, e.g. "<<word>>". 
+        //Note: use str.substring(i, j) to extract the String starting at index 
+        //i and going up to but not including index j.
+
+
+        //makeOutWord("<<>>", "Yay") → "<<Yay>>"
+        //makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
+        //makeOutWord("[[]]", "word") → "[[word]]"
+
+        public static string MakeOutWord(String oot, String word)
+        {
+            //return oot[oot.Length -1];
+            return oot.Substring(0,2) + word + oot.Substring(2);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(MakeOutWord("<<>>", "Yay"));
+            Console.WriteLine(MakeOutWord("<<>>", "WooHoo"));
+            Console.WriteLine(MakeOutWord("[[]]", "word"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+        //extraEnd
+
+        //Given a string, return a new string made of 3 copies of the last 2 chars 
+        //of the original string. The string length will be at least 2.
+
+        public static String ExtraEnd(String str)
+        {
+            string answer = str.Substring(str.Length - 2);
+            return answer + answer + answer;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(ExtraEnd("Hello"));
+            Console.WriteLine(ExtraEnd("ab"));
+            Console.WriteLine(ExtraEnd("hi"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+        //firstTwo
+
+        //Given a string, return the string made of its first two chars, so the String "Hello" yields "He".
+        //If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the
+        //empty string "" yields the empty string "". Note that str.length() returns the length of a string.
+
+        public static String FirstTwo(String str)
+        {
+            if (str.Length < 2)            
+                return str;            
+            else            
+                return str.Substring(0, 2);            
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(FirstTwo("Hello"));
+            Console.WriteLine(FirstTwo("abcdef"));
+            Console.WriteLine(FirstTwo("xz"));
+            Console.WriteLine(FirstTwo(""));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+        //firstHalf
+
+        //Given a string of even length, return the first half.
+        //So the string "WooHoo" yields "Woo".
+
+        public static String FirstHalf(String str)
+        {
+            int hLen = str.Length / 2 ;
+            return str.Substring(0,hLen);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(FirstHalf("WooHoo"));
+            Console.WriteLine(FirstHalf("HelloThere"));
+            Console.WriteLine(FirstHalf("abcdef"));
+        }
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------
