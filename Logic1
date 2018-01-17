@@ -1,13 +1,13 @@
-cigarParty
+//cigarParty
 
-When squirrels get together for a party, they like to have cigars. A squirrel party is successful when 
-the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is 
-no upper bound on the number of cigars. Return true if the party with the given values is successful, or false otherwise.
+//When squirrels get together for a party, they like to have cigars. A squirrel party is successful when 
+//the number of cigars is between 40 and 60, inclusive. Unless it is the weekend, in which case there is 
+//no upper bound on the number of cigars. Return true if the party with the given values is successful, or false otherwise.
 
 
-cigarParty(30, false) → false
-cigarParty(50, false) → true
-cigarParty(70, true) → true
+//cigarParty(30, false) → false
+//cigarParty(50, false) → true
+//cigarParty(70, true) → true
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -17,29 +17,137 @@ namespace CodingBatLogic1
     {
         public static bool CigarParty(int cigars, bool isWeekend)
         {
-            if (isWeekend && cigars > 39)
-            {
-                return true;
-            }
+            if (isWeekend && cigars > 39)            
+                return true;            
             else if (!isWeekend && cigars >39 && cigars < 61)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
+                return true;           
+            else         
+                return false;           
         }
-
+        
         static void Main(string[] args)
         {
             Console.WriteLine(CigarParty(30, false));
             Console.WriteLine(CigarParty(50, false));
             Console.WriteLine(CigarParty(70, true));
         }
-
-
-
     }
 }
+-------------------------------------------------------------------------------------------------------------------------
+    //dateFashion
+    
+    //You and your date are trying to get a table at a restaurant.
+    //The parameter "you" is the stylishness of your clothes, 
+    //in the range 0..10, and "date" is the stylishness of your date's clothes.
+    //The result getting the table is encoded as an int value with 0=no,
+    //1=maybe, 2=yes. If either of you is very stylish, 8 or more,
+    //then the result is 2(yes). With the exception that if 
+    //either of you has style of 2 or less, then the result is 0 (no).
+    //Otherwise the result is 1 (maybe).
+
+
+    //dateFashion(5, 10) → 2
+    //dateFashion(5, 2) → 0
+    //dateFashion(5, 5) → 1
+    
+-------------------------------------------------------------------------------------------------------------------------
+namespace CodingBatLogic1
+{
+    class Program
+    {
+        public static int DateFashion(int you, int date)
+        {
+            if (you <= 2 || date <= 2)            
+                return 0;            
+            else if (you >= 8 || date >=8)           
+                return 2;            
+            else            
+                return 1;                 
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine(DateFashion(5, 10));
+            Console.WriteLine(DateFashion(5, 2));
+            Console.WriteLine(DateFashion(5, 5));
+            Console.WriteLine(DateFashion(9, 1));
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------
+//squirrelPlay 
+
+//The squirrels in Palo Alto spend most of the day playing.In particular,
+//they play if the temperature is between 60 and 90 (inclusive). Unless it is summer,
+//then the upper limit is 100 instead of 90. Given an int temperature and a boolean
+//isSummer, return true if the squirrels play and false otherwise.
+
+
+//squirrelPlay(70, false) → true
+//squirrelPlay(95, false) → false
+//squirrelPlay(95, true) → true
+
+namespace CodingBatLogic1
+{
+    class Program
+    {
+        public static bool SquirrelPlay(int temp, bool isSummer)
+        {
+            if (isSummer && temp >=60 && temp <= 100)
+                return true;            
+            else if (!isSummer && temp >= 60 && temp <=90 )
+                return true;
+            else 
+                return false;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine(SquirrelPlay(70, false));
+            Console.WriteLine(SquirrelPlay(95, false));
+            Console.WriteLine(SquirrelPlay(95, true));            
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
